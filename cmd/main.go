@@ -1,12 +1,12 @@
 package main
 
 import (
-	"first/api"
-	"first/utils"
+	"first/dao"
+	"first/router"
 )
 
 func main() {
-	utils.ConnectDB()
-	r := api.NewRouter()
+	dao.ConnectDB()
+	r := router.NewRouter()
 	r.Spin()
 }
